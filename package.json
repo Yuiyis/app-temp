@@ -4,7 +4,7 @@
   "description": "公共组件",
   "main": "./stack/sp-stack.umd.cjs",
   "module": "./stack/sp-stack.js",
-  "types": "./stack/index.d.ts",
+  "types": "./types/index.d.ts",
   "author": "yuiyi",
   "license": "ISC",
   "files": [
