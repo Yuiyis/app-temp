@@ -2,14 +2,14 @@
   "name": "sp-stack",
   "version": "1.0.0",
   "description": "公共组件",
-  "main": "./dist/sp-stack.js",
+  "main": "./stack/sp-stack.js",
   "type": "module",
   "author": "yuiyi",
   "license": "ISC",
   "exports": {
     ".": {
-      "import": "./dist/sp-stack.js",
-      "require": "./dist/sp-stack.umd.js"
+      "import": "./stack/sp-stack.js",
+      "require": "./stack/sp-stack.umd.js"
     }
   },
   "scripts": {
