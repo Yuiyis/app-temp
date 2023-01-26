@@ -4,12 +4,16 @@
   "description": "公共组件",
   "main": "./stack/sp-stack.umd.cjs",
   "module": "./stack/sp-stack.js",
-  "type": "module",
+  "types": "./stack/index.d.ts",
   "author": "yuiyi",
   "license": "ISC",
+  "files": [
+    "stack",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
