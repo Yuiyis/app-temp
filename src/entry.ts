@@ -9,6 +9,7 @@ const component = [Test, ClientOnly];
 const Novel = {
     install(app: App) {
         component.forEach((item) => {
+            console.log(item.__name)
             console.log(item.name)
             app.component(item.name, item);
         });
