@@ -25,15 +25,11 @@ export default defineConfig({
         outDir: 'lib',
         lib: {
             entry: 'src/entry.ts',
-            name: 'index',
-            fileName: 'index',
+            name: 'index', // umd的变量名
+            fileName: (format) => `index.${format}.js`, // 输出文件名
+            formats: ['es', 'umd'],
         },
         rollupOptions: {
-            output: {
-                globals: {
-                    vue: 'Vue',
-                },
-            },
             external: ['vue'],
         },
     },
