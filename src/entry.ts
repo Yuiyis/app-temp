@@ -1,10 +1,10 @@
 import type {App} from 'vue'
-import hButton from "@/components/HelloWorld.vue";
-import cOnly from "@/components/ClientOnly.vue";
+import HelloWorld from "@/components/HelloWorld";
+import ClientOnly from "@/components/ClientOnly";
 // 按需引入
-export {hButton,cOnly};
+export {HelloWorld, ClientOnly};
 
-const component = [hButton,cOnly];
+const component = [HelloWorld, ClientOnly];
 
 const MukUI = {
     install(app: App) {
@@ -13,8 +13,6 @@ const MukUI = {
         });
     },
 };
-
-
 
 
 export default MukUI;
