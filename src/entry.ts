@@ -1,12 +1,12 @@
 import type {App} from 'vue'
-import HelloWorld from "@/components/HelloWorld";
+import Test from "@/components/test";
 import ClientOnly from "@/components/ClientOnly";
 // 按需引入
-export {HelloWorld, ClientOnly};
+export {Test, ClientOnly};
 
-const component = [HelloWorld, ClientOnly];
+const component = [Test, ClientOnly];
 
-const MukUI = {
+const Novel = {
     install(app: App) {
         component.forEach((item) => {
             app.component(item.name, item);
@@ -15,4 +15,4 @@ const MukUI = {
 };
 
 
-export default MukUI;
+export default Novel;

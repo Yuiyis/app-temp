@@ -1,8 +1,8 @@
 import type { App } from 'vue';
-import HelloWorld from './components/HelloWorld';
+import Test from './components/test';
 import ClientOnly from './components/ClientOnly';
-export { HelloWorld, ClientOnly };
-declare const MukUI: {
+export { Test, ClientOnly };
+declare const Novel: {
     install(app: App): void;
 };
-export default MukUI;
+export default Novel;
