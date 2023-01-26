@@ -1,15 +1,15 @@
 import type {App} from 'vue'
-import Test from "@/components/Test";
-import ClientOnly from "@/components/Client";
+import TestClient from "@/components/Test";
+import Client from "@/components/Client";
 // 按需引入
-export {Test, ClientOnly};
+export {TestClient, Client};
 
-const component = [Test, ClientOnly];
+const component = [TestClient, Client];
 
 const Novel = {
     install(app: App) {
         component.forEach((item) => {
-            console.log(item.__name)
+            console.log("___",item.__name)
             console.log(item.name)
             app.component(item.name, item);
         });
