@@ -2,7 +2,7 @@
   "name": "sp-stack",
   "version": "1.0.0",
   "description": "公共组件",
-  "main": "./lib/index.es.js",
+  "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",
   "typings": "./lib/entry.d.ts",
   "author": "yuiyi",
