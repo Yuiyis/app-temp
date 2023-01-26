@@ -2,7 +2,7 @@
   "name": "sp-stack",
   "version": "1.0.0",
   "description": "公共组件",
-  "main": "sp-stack.js",
+  "main": "./stack/sp-stack.js",
   "type": "module",
   "author": "yuiyi",
   "license": "ISC",
