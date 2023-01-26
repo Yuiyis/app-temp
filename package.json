@@ -2,16 +2,11 @@
   "name": "sp-stack",
   "version": "1.0.0",
   "description": "公共组件",
-  "main": "./stack/sp-stack.js",
+  "main": "./stack/sp-stack.umd.cjs",
+  "module": "./stack/sp-stack.js",
   "type": "module",
   "author": "yuiyi",
   "license": "ISC",
-  "exports": {
-    ".": {
-      "import": "./stack/sp-stack.js",
-      "require": "./stack/sp-stack.umd.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
