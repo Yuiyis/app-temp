@@ -1,15 +1,17 @@
 import type {App} from 'vue'
-import Button from "@/components/HelloWorld.vue";
-import ClientOnly from "@/components/ClientOnly.vue";
+import hButton from "@/components/HelloWorld.vue";
+import cOnly from "@/components/ClientOnly.vue";
 // 按需引入
-export {Button};
+export {hButton,cOnly};
 
-const component = [Button];
+const component = [hButton,cOnly];
 
-export default {
+const MukUI = {
     install(app: App) {
         component.forEach((item) => {
             app.component(item.name, item);
         });
     },
 };
+
+export default MukUI;

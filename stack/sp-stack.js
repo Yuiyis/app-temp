@@ -1,5 +1,5 @@
-import { defineComponent as n, openBlock as o, createElementBlock as l, normalizeClass as a, renderSlot as r } from "vue";
-const s = /* @__PURE__ */ n({
+import { defineComponent as o, openBlock as a, createElementBlock as s, normalizeClass as r, renderSlot as l, ref as c, onMounted as u, nextTick as m, createCommentVNode as p } from "vue";
+const d = /* @__PURE__ */ o({
   __name: "HelloWorld",
   props: {
     size: {
@@ -11,21 +11,32 @@ const s = /* @__PURE__ */ n({
       default: "default"
     }
   },
-  setup(e) {
-    return (t, m) => (o(), l("button", {
-      class: a(["muk-btn", [e.size, e.type]])
+  setup(t) {
+    return (e, n) => (a(), s("button", {
+      class: r(["muk-btn", [t.size, t.type]])
     }, [
-      r(t.$slots, "default")
+      l(e.$slots, "default")
     ], 2));
   }
-}), c = [s], u = {
-  install(e) {
-    c.forEach((t) => {
-      e.component(t.name, t);
+}), f = /* @__PURE__ */ o({
+  __name: "ClientOnly",
+  setup(t) {
+    const e = c(!1);
+    return u(() => {
+      m(() => {
+        e.value = !0;
+      });
+    }), (n, _) => e.value ? l(n.$slots, "default", { key: 0 }) : p("", !0);
+  }
+}), i = [d, f], k = {
+  install(t) {
+    i.forEach((e) => {
+      t.component(e.name, e);
     });
   }
 };
 export {
-  s as Button,
-  u as default
+  f as cOnly,
+  k as default,
+  d as hButton
 };
