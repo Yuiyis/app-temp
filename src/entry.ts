@@ -1,17 +1,17 @@
 import type {App} from 'vue'
-import TestClient from "@/components/Test";
-import Client from "@/components/Client";
+import Face from "@/cpts/Face/Face.vue";
+import ClientOnly from "@/cpts/ClientOnly/ClientOnly.vue";
 // 按需引入
-export {TestClient, Client};
+export {Face, ClientOnly};
 
-const component = [TestClient, Client];
-
+const component = [Face, ClientOnly];
+// 全量引入
 const Novel = {
     install(app: App) {
         component.forEach((item) => {
-            console.log("___",item.__name)
-            console.log(item.name)
-            app.component(item.name, item);
+            let name = item.__name as string;
+            console.log(name)
+            app.component(name, item);
         });
     },
 };

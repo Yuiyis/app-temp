@@ -7,15 +7,11 @@ import dts from 'vite-plugin-dts'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [vue(), dts({
-        //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
-        tsConfigFilePath: 'tsconfig.json'
-    }),
-        //因为这个插件默认打包到es下，我们想让lib目录下也生成声明文件需要再配置一个
-        dts({
-            outputDir: 'lib',
-            tsConfigFilePath: 'tsconfig.json'
-        })
-    ],
+        cleanVueFileName: true,
+        staticImport: true,
+        insertTypesEntry: true,
+
+    })],
     resolve: {
         alias: {
             "@": resolve(__dirname, "./src"),
@@ -31,6 +27,12 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['vue'],
+            output: {
+                // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+                globals: {
+                    vue: 'Vue',
+                },
+            },
         },
     },
 })

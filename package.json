@@ -1,10 +1,11 @@
 {
   "name": "sp-stack",
   "version": "1.0.0",
+  "type": "module",
   "description": "公共组件",
   "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",
-  "typings": "./lib/entry.d.ts",
+  "types": "./lib/entry.d.ts",
   "author": "yuiyi",
   "license": "ISC",
   "files": [
