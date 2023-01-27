@@ -1,14 +1,13 @@
 <script lang="ts" setup>
-import { ref, nextTick, onMounted } from "vue";
+import {ref, onMounted} from "vue";
+
 const SSR = ref(false);
 onMounted(() => {
-  nextTick(() => {
-    SSR.value = true;
-  });
+  SSR.value = true;
 });
 </script>
 <template>
   <template v-if="SSR">
-    <slot />
+    <slot/>
   </template>
 </template>
